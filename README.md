@@ -1,6 +1,6 @@
 # LIFTR: LInearized Function TRick
 
-This codebase implements the experiments and reproduces the results of *Approximating Function Space Distance for Continual Learning in Transformers*.
+This codebase implements the experiments and reproduces the results of [Approximating Function Space Distance for Continual Learning in Transformers](https://openreview.net/forum?id=tFo9YPiVNF).
 
 LIFTR approximates function space distance (FSD) for continual learning regularization by propagating input distribution moments through a step-wise linearized model, without storing any actual datapoints.
 
@@ -40,7 +40,7 @@ python main.py \
     train_epochs=200 \
     fsd_estimator=liftr \
     fsd_estimator.stochastic=True \
-    fsd_weight=1
+    fsd_weight=0.1
 ```
 
 ## Project structure
@@ -49,7 +49,7 @@ python main.py \
 src/
   datasets/       # Arithmetic continual learning benchmark
   models/         # Transformer implementation
-  fsd_estimators/ # LIFTR, EWC, NTK, RandomSubset, GroundTruth
+  fsd_estimators/ # LIFTR, EWC, NTK, RandomSubset, GroundTruth (Oracle)
   liftr_modes/    # Per-layer moment propagation rules
 conf/             # Hydra config files
 main.py           # Training entry point
