@@ -1,0 +1,7 @@
+_target_: src.datasets.arithmetic.Arithmetic
+seq_len: 3
+num_tasks: 2
+p: 113
+num_samples: 12769
+frac_train: 0.7
+seed: ${seed}

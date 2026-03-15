@@ -1,0 +1,6 @@
+_target_: src.models.transformer.Transformer
+output_shape: 9
+d_model: 16
+num_heads: 1
+d_hidden: 16
+num_blocks: 2

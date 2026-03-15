@@ -1,0 +1,31 @@
+seed: 123
+optimizer: adamw
+learning_rate: 0.0003
+weight_decay: 0.1
+batch_size: 256
+train_epochs: 200
+fsd_weight: 0.0001
+classwise: false
+experiment_name: test
+use_wandb: false
+output_csv: null
+dataset:
+  _target_: src.datasets.arithmetic.Arithmetic
+  seq_len: 3
+  num_tasks: 2
+  p: 113
+  num_samples: 12769
+  frac_train: 0.7
+  seed: ${seed}
+model:
+  _target_: src.models.transformer.Transformer
+  output_shape: 115
+  d_model: 512
+  num_heads: 4
+  d_hidden: 1024
+  num_blocks: 2
+fsd_estimator:
+  _target_: src.fsd_estimators.ground_truth.GroundTruth
+  metric_type: euc
+  reduction: sum
+  stochastic: true

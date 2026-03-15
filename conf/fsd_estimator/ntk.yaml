@@ -1,0 +1,4 @@
+_target_: src.fsd_estimators.ntk.NTK
+metric_type: euc
+reduction: mean
+sample_size: 32

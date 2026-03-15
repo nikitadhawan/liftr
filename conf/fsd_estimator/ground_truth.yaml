@@ -1,0 +1,4 @@
+_target_: src.fsd_estimators.ground_truth.GroundTruth
+metric_type: euc
+reduction: sum
+stochastic: False

@@ -1,0 +1,14 @@
+- dataset=arithmetic
+- model=transformer
+- model.d_model=512
+- model.d_hidden=1024
+- model.num_heads=4
+- model.num_blocks=2
+- model.output_shape=115
+- optimizer=adamw
+- learning_rate=3e-4
+- batch_size=256
+- train_epochs=200
+- fsd_estimator=liftr
+- fsd_estimator.stochastic=True
+- fsd_weight=1

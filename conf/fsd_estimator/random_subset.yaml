@@ -1,0 +1,4 @@
+_target_: src.fsd_estimators.random_subset.RandomSubset
+metric_type: euc
+reduction: sum
+sample_size: 32

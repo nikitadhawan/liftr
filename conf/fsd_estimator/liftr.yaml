@@ -1,0 +1,6 @@
+_target_: src.fsd_estimators.liftr.LIFTR
+metric_type: euc
+reduction: mean
+sample_size: 32
+stochastic: False
+diag_cov: False
